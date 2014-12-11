@@ -36,7 +36,7 @@ class LessonRepository
         $stmt = $this->db->prepare('
             SELECT id, title, `interval`, last_studied, date_started, next_date
             FROM lessons
-            WHERE next_date >= DATE(NOW()) AND `interval` < 25
+            WHERE next_date <= DATE(NOW()) AND `interval` < 25
             ORDER BY `interval` DESC
         ');
         $stmt->execute();
