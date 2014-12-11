@@ -4,21 +4,18 @@ namespace LessonApp\Controller;
 
 class Controller
 {
-	protected $db;
-	protected $template;
-    protected $slim;
+    protected $app;
 
-	function __construct(\PDO $pdo = null, \Twig_Environment $twig = null, \Slim\Slim $slim)
+	function __construct(\Slim\Slim $app)
 	{
-		$this->db = $pdo;
-		$this->template = $twig;
-        $this->slim = $slim;
+        $this->app = $app;
+
 	}
 
 	protected function render($template, $data)
 	{
-        $data = array_merge($data, ['route' => $this->slim->router()->getCurrentRoute()->getName()]);
+        $data = array_merge($data, ['route' => $this->app->router()->getCurrentRoute()->getName()]);
 
-		echo $this->template->loadTemplate($template)->render($data);
+		echo $this->app->template->loadTemplate($template)->render($data);
 	}
 }
