@@ -1,0 +1,54 @@
+body
+{
+    margin-bottom: 50px;
+}
+
+.list-group-item .detail
+{
+    float: right;
+}
+
+h1 + .list-group
+{
+    margin-top: 30px;
+}
+
+p.dialogue
+{
+    font-size: 2em;
+    line-height: 2em;
+}
+
+table.hanzi
+{
+    border: 2px solid #333;
+    border-collapse: collapse;
+}
+
+table.hanzi td
+{
+    width: 60px;
+    height: 60px;
+    border: 1px solid #333;
+    color: #ddd;
+    font-size: 3em;
+    text-align: center;
+    vertical-align: middle;
+    font-family: "kai", sans-serif;
+}
+
+.vocab-list
+{
+    word-wrap: break-word;
+}
+
+.vocab-list ruby
+{
+    font-size: 2em;
+}
+
+.vocab-list .small
+{
+    font-size: 1.2em;
+    word-wrap: break-word;
+}

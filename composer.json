@@ -1,0 +1,14 @@
+{
+	"name": "ikore/lesson-app",
+	"description": "This application can track which lessons to review and study.",
+	"license": "proprietary",
+	"version": "1.0-dev",
+	"type": "project",
+    "require": {
+        "slim/slim": "2.*",
+        "twig/twig": "1.16.2"
+    },
+    "autoload": {
+        "psr-4": {"LessonApp\\": "src/"}
+    }
+}

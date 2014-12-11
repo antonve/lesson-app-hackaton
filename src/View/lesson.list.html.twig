@@ -1,0 +1,20 @@
+{% extends 'base.html.twig' %}
+
+{% block content %}
+<div class="container">
+    <h1>All lessons</h1>
+    <ul class="list-group">
+        {% for lesson in lessons %}
+        <li class="list-group-item">
+            <a href="/lesson/{{ lesson.id }}">
+                Lesson {{ lesson.id }} - {{ lesson.title }}
+
+                <span class="detail">
+                Last studied: {{ lesson.last_studied|date('d-m-Y') }} | Interval: {{ lesson.interval }}
+                </span>
+            </a>
+        </li>
+        {% endfor %}
+    </ul>
+</div>
+{% endblock %}
