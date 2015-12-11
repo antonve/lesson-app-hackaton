@@ -6,13 +6,13 @@ use LessonApp\Model\Lesson;
 
 class LessonController extends Controller
 {
-	public function index()
-	{
-		$repo = new LessonRepository($this->app->db);
-		$lessons = $repo->getLessonsForToday();
+    public function index()
+    {
+        $repo = new LessonRepository($this->app->db);
+        $lessons = $repo->getLessonsForToday();
 
-		$this->render('index.html.twig', ['lessons' => $lessons]);
-	}
+        $this->render('index.html.twig', ['lessons' => $lessons]);
+    }
 
     public function all()
     {

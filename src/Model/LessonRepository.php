@@ -4,12 +4,12 @@ namespace LessonApp\Model;
 
 class LessonRepository
 {
-	private $db;
+    private $db;
 
-	function __construct(\PDO $pdo)
-	{
-		$this->db = $pdo;
-	}
+    function __construct(\PDO $pdo)
+    {
+        $this->db = $pdo;
+    }
 
     public function getAllLessons()
     {
